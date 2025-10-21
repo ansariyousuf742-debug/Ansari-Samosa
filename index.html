@@ -1,0 +1,359 @@
+samosa-website/
+│
+├── index.html
+├── cart.html
+├── login.html
+├── payment.html
+├── admin.html
+├── reviews.html
+├── style.css
+└── script.js
+
+
+
+<section cl<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Samosa King | Home</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King 🍴</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="cart.html">Cart <span id="cartCountHeader">0</span></a>
+<a href="reviews.html">Reviews</a>
+<a href="login.html">Login</a>
+</nav>
+</header>ass="hero">
+<h2>Hot & Crispy Samosas, Anytime!</h2>
+<button id="shopNow">Shop Now</button>
+</section>
+
+
+<section class="products">
+<h2>Our Best Sellers</h2>
+<div class="product-list">
+<div class="product-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Samosachutney.jpg" alt="Samosa" />
+<h3>Classic Samosa</h3>
+<p>₹10 each</p>
+<button class="addCart" data-name="Classic Samosa" data-price="10">Add to Cart</button>
+</div>
+
+
+<div class="product-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Samosa_India.jpg" alt="Paneer Samosa" />
+<h3>Paneer Samosa</h3>
+<p>₹20 each</p>
+<button class="addCart" data-name="Paneer Samosa" data-price="20">Add to Cart</button>
+</div>
+
+
+<div class="product-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Samosas.jpg" alt="Veg Samosa" />
+<h3>Veg Samosa</h3>
+<p>₹15 each</p>
+<button class="addCart" data-name="Veg Samosa" data-price="15">Add to Cart</button>
+</div>
+</div>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King. All Rights Reserved. — <a href="admin.html">Admin</a></p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cart | Samosa King</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King 🍴</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="cart.html">Cart <span id="cartCount">0</span></a>
+<a href="reviews.html">Reviews</a>
+<a href="login.html">Login</a>
+</nav>
+</header>
+
+
+<section class="cart-section">
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<p id="totalPrice"></p>
+<a id="toPayment" href="payment.html"><button id="checkoutBtn">Proceed to Payment</button></a>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login | Samosa King</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King 🍴</h1>
+</header>
+
+
+<section class="login-section">
+<h2>Login to Your Account</h2>
+<form id="loginForm">
+<input type="text" id="username" placeholder="Username" required />
+<input type="password" id="password" placeholder="Password" required />
+<button type="submit">Login</button>
+</form>
+<p style="margin-top:10px; font-size:0.9rem;">(For admin open <code>admin.html</code> — password: <strong>admin123</strong>)</p>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King.</p>
+</footer>
+
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', e => {
+e.preventDefault();
+alert('Login Successful ✅');
+window.location.href = 'index.html';
+});
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Payment | Samosa King</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King 🍴</h1>
+</header>
+
+
+<section class="payment-section">
+<h2>Complete Your Order</h2>
+<form id="paymentForm">
+<input type="text" id="fullName" placeholder="Full Name" required />
+<input type="text" id="address" placeholder="Address" required />
+<input type="tel" id="phone" placeholder="Phone Number" required />
+<select id="paymentMethod" required>
+<option value="">Select Payment Method</option>
+<option>Cash on Delivery</option>
+<option>UPI / GPay / Paytm</option>
+<option>Credit / Debit Card</option>
+</select>
+<button type="submit">Place Order</button>
+</form>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin | Samosa King</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King — Admin</h1>
+<nav>
+<a href="index.html">Site</a>
+</nav>
+</header>
+
+
+<section class="admin-section">
+<h2>Orders</h2>
+
+
+<div id="adminAuth">
+<p>Enter admin password to continue:</p>
+<input type="password" id="adminPass" placeholder="Password" />
+<button id="adminLoginBtn">Login</button>
+<p id="authMsg" style="color:red"></p>
+</div>
+
+
+<div id="adminPanel" style="display:none; margin-top:20px;">
+<button id="refreshOrders">Refresh Orders</button>
+<button id="clearOrders">Clear All Orders</button>
+<div id="ordersList" style="margin-top:15px;"></div>
+</div>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King Admin.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reviews | Samosa King</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Samosa King 🍴</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="cart.html">Cart</a>
+<a href="reviews.html">Reviews</a>
+</nav>
+</header>
+
+
+<section class="reviews-section">
+<h2>Customer Reviews</h2>
+<form id="reviewForm">
+<input type="text" id="rname" placeholder="Your Name" required />
+<textarea id="rtext" placeholder="Write your review" rows="4" required></textarea>
+<button type="submit">Submit Review</button>
+</form>
+
+
+<div id="reviewsList" style="margin-top:20px;"></div>
+</section>
+
+
+<footer>
+<p>© 2025 Samosa King.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>* {margin:0; padding:0; box-sizing:border-box; font-family: "Poppins", sans-serif;}
+
+
+body {background-color:#fff8e7; color:#333;}
+
+
+header {
+background-color:#ffb703; color:white; display:flex; justify-content:space-between; align-items:center; padding:15px 20px;
+}
+
+
+nav a {color:white; margin-left:15px; text-decoration:none; font-weight:500;}
+
+
+.hero {text-align:center; padding:60px 20px; background:#fb8500; color:white;}
+.hero h2 {margin-bottom:15px;}
+.hero button {background:white; color:#fb8500; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;}
+
+
+.products {text-align:center; padding:30px 20px;}
+.product-list {display:flex; justify-content:center; flex-wrap:wrap; gap:20px;}
+.product-card {background:white; width:220px; border-radius:10px; padding:15px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.product-card img {width:100%; border-radius:10px; height:140px; object-fit:cover}
+.product-card button {margin-top:10px; background:#fb8500; border:none; padding:10px; color:white; cursor:pointer; border-radius:5px; width:100%;}
+
+
+.cart-section, .login-section, .payment-section, .reviews-section, .admin-section {text-align:center; padding:30px 20px;}
+#cartItems {margin:20px auto; width:90%; max-width:700px; background:white; padding:15px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+footer {text-align:center; padding:12px; background-color:#ffb703; color:white; margin-top:20px;}
+
+
+input, select, textarea {display:block; margin:10px auto; padding:10px; width:80%; max-width:360px; border-radius:5px; border:1px solid #ccc;}
+button {background:#ffb703; color:white; border:none; padding:10px 16px; border-radius:5px; cursor:pointer;}
+
+
+.order-item {display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid #eee}
+.order-item .meta {text-align:left}
+.small-btn {padding:6px 8px; font-size:0.9rem; margin-left:8px;}// -------------------------
+// General helper functions
+// -------------------------
+function getCart() {
+return JSON.parse(localStorage.getItem('cart')) || [];
+}
+function setCart(cart) {
+localStorage.setItem('cart', JSON.stringify(cart));
+}
+function updateCartCount() {
+const n = getCart().length;
+const el1 = document.getElementById('cartCount');
+const el2 = document.getElementById('cartCountHeader');
+if (el1) el1.textContent = n;
+if (el2) el2.textContent = n;
+}
+
+
+// -------------------------
+// Add to Cart (on index)
+// -------------------------
+document.querySelectorAll('.addCart').forEach(btn => {
+btn.addEventListener('click', () => {
+const name = btn.dataset.name;
+const price = parseInt(btn.dataset.price);
+let cart = getCart();
+cart.push({ name, price });
+setCart(cart);
+updateCartCount();
+alert(name + ' added to cart!');
+});
+});
+
+
+// Scroll Shop Now
+const shopBtn = document.getElementById('shopNow');
+if (shopBtn) {
+shopBtn.addEventListener('click', () => {
+window.scrollTo({ top: 500, behavior: 'smooth' });
+});
+}
+
+
+// -------------------------
+// Cart page logic
+// -------------------------
+if (window.location.pathname.includes('cart.html')) {
+const cart = getCart();
+const cartItemsDiv = document.getElementById('cartItems');
+const totalPriceP = document.getElementById('totalPrice');
+
+
+if (cart.length === 0) {
+cartItemsDiv.innerHTML = '<p>Your cart is empty!</p>';
+totalPriceP.textContent = '';
+document.
